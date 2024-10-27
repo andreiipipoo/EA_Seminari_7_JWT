@@ -6,7 +6,7 @@ import { AdminValidation} from '../middleware/verifyAdmin'
 const router = express.Router();
 
 // Ruta para obtener todos los usuarios
-router.get("/", getUsers);
+router.get("/", TokenValidation, AdminValidation, getUsers);
 
 // Ruta per crear usuari
 router.post("/", createUser);
@@ -14,8 +14,8 @@ router.post("/", createUser);
 //Ruta per obtenir usuari per id
 router.get("/:id", getUser);
 
-//Ruta per actialitzar usuari per id
-router.put("/update/:id", updateUser);
+//Ruta per actualitzar user per id
+router.put("/update/:id", TokenValidation, verifyOwnership, updateUser);
 
 //Ruta per eliminar user per id
 router.delete('/delete/:id', TokenValidation, AdminValidation, deleteUser);

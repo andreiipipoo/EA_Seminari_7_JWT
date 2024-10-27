@@ -1,3 +1,14 @@
+## Funcionalitats Implementades
+
+- Permetre que un usuari, introduint el seu ID i el seu token, pugui fer canvis sobre les seves dades.
+- Restringir la visualització del llistat d'usuaris només als usuaris amb rol d'administrador.
+- Clonació correcta del repositori utilitzant les següents comandes:
+
+  ```sh
+  git remote remove origin
+  git remote add origin <URL-del-nou-repositori>
+  git push -u origin main
+
 ## Seminari JWT
 
 - register: crear usuari i et retorna un token 
@@ -13,15 +24,18 @@
 # Commands to execute
 
 Instal·lar jwt
-- npm install jsonwebtoken 
-- npm install @types/jsonwebtoken -D
-
+```sh
+npm install jsonwebtoken 
+npm install @types/jsonwebtoken -D
+```
 Instal·lar dotenv
-- npm i dotenv
-- npm i @types/dotenv -D
-
+```sh
+npm i dotenv
+npm i @types/dotenv -D
+```
 
 Instal·lar bcrypt
-- npm i bcryptjs
-- npm i @types/bcryptjs -D
-
+```sh
+npm i bcryptjs
+npm i @types/bcryptjs -D
+```
